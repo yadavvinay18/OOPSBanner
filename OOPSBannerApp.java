@@ -1,54 +1,47 @@
 public class OOPSBannerApp {
     public static void main(String[] args) {
+        String[] o = getOPattern();
+        String[] p = getPPattern();
+        String[] s = getSPattern();
 
-       
-        String[] lines = {
-
-            String.join(" ",
-                    " ***** ",
-                    " ***** ",
-                    " ***** ",
-                    " ***** "),
-
-            String.join(" ",
-                    " *   * ",
-                    " *   * ",
-                    " *   * ",
-                    " *     "),
-
-            String.join(" ",
-                    " *   * ",
-                    " *   * ",
-                    " ***** ",
-                    " ***** "),
-
-            String.join(" ",
-                    " *   * ",
-                    " *   * ",
-                    " *     ",
-                    "     * "),
-
-            String.join(" ",
-                    " *   * ",
-                    " *   * ",
-                    " *     ",
-                    "     * "),
-
-            String.join(" ",
-                    " *   * ",
-                    " *   * ",
-                    " *     ",
-                    " *   * "),
-
-            String.join(" ",
-                    " ***** ",
-                    " ***** ",
-                    " *     ",
-                    " ***** ")
-        };
-
-        for (String line : lines) {
-            System.out.println(line);
+        for (int i = 0; i < 7; i++) {
+            System.out.println(o[i] + " " + o[i] + " " + p[i] + " " + s[i]);
         }
+    }
+
+    public static String[] getOPattern() {
+        return new String[]{
+                " ***** ",
+                " *   * ",
+                " *   * ",
+                " *   * ",
+                " *   * ",
+                " *   * ",
+                " ***** "
+        };
+    }
+
+    public static String[] getPPattern() {
+        return new String[]{
+                " ***** ",
+                " *   * ",
+                " ***** ",
+                " *     ",
+                " *     ",
+                " *     ",
+                " *     "
+        };
+    }
+
+    public static String[] getSPattern() {
+        return new String[]{
+                " ***** ",
+                " *     ",
+                " ***** ",
+                "     * ",
+                "     * ",
+                " *   * ",
+                " ***** "
+        };
     }
 }
